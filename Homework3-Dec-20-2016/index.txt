@@ -1,0 +1,22 @@
+2) 	HTML stands for hypertxt markup languageand it describes the structure of Web pages using markup
+	HTML elements are the building blocks of HTML pages
+	HTML elements are represented by tags
+	HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+	Browsers do not display the HTML tags, but use them to render the content of the page
+creating an HTML document
+	Step 1: Open Notepad (PC) Open Notepad in Windows 8 or later: ...
+	Step 1: Open TextEdit (Mac) Open TextEdit. ...
+	Step 2: Write Some HTML. Write or copy some HTML into Notepad. ...
+	Step 3: Save the HTML Page. ...
+	Step 4: View HTML Page in Your Browser.
+3) DOCTYPE--> The <!DOCTYPE html> declaration defines this document to be HTML5
+4) Tag-->
+	HTML tags are the hidden keywords within a web page that define how the browser must format and display the content. Most tags must 		have two parts, an opening and a closing part. For example, <html> is the opening tag and </html> is the closing tag.
+  Elements-->
+  	An HTML element usually consists of a start tag and end tag, with the content inserted in between:
+	<tagname>Content goes here...</tagname>
+	The HTML element is everything from the start tag to the end tag:
+5)Attribute-->
+	Attributes provide additional information about an element
+	Attributes are always specified in the start tag
+	Attributes usually come in name/value pairs like: name="value"
