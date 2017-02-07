@@ -1,0 +1,149 @@
+2)input attributes
+	syntax:
+		<input type="" name="" value="")
+		<input type="value">
+			button-->Defines a clickable button (mostly used with a JavaScript to activate a script)
+			checkbox-->Defines a checkbox
+			color-->Defines a color picker
+			date-->Defines a date control (year, month and day (no time))
+			datetime-local-->Defines a date and time control (year, month, day, hour, minute, second, and fraction of a second (no time zone)
+			email-->Defines a field for an e-mail address
+			file-->Defines a file-select field and a "Browse..." button (for file uploads)
+			hidden-->Defines a hidden input field
+			image-->Defines an image as the submit button
+			month-->Defines a month and year control (no time zone)
+			number-->Defines a field for entering a number
+			password-->Defines a password field (characters are masked)
+			radio-->Defines a radio button
+			range-->Defines a control for entering a number whose exact value is not important (like a slider control). Default range is from 0 to 100
+			reset-->Defines a reset button (resets all form values to default values)
+			search-->Defines a text field for entering a search string
+			submit-->Defines a submit button
+			tel-->Defines a field for entering a telephone number
+			text-->Default. Defines a single-line text field (default width is 20 characters)
+			time-->Defines a control for entering a time (no time zone)
+			url-->Defines a field for entering a URL
+			week-->Defines a week and year control (no time zone)
+3)A semantic element clearly describes its meaning to both the browser and the developer. 
+		Examples of non-semantic elements: <div> and <span> - Tells nothing about its content. 
+		Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+4)article 
+			-- self-contained content (all info regarding a specific entity is with in this article tag)
+			-- if you remove the article no traces about the entity would left
+			 tag specifies independent, self-contained content.
+			An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+			Potential sources for the <article>
+	<section> means that the content inside is grouped (i.e. relates to a single theme), and should appear as an entry in an outline of the page.
+	<div>, on the other hand, does not convey any meaning, aside from any found in its class, lang and title attributes.
+
+5)	<main>:	
+		The <main> tag specifies the main content of a document.
+		The content inside the <main> element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
+		Note: There must not be more than one <main> element in a document. The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element.
+								syntax:
+									<main>
+										<h1></h1>
+										<p></p>
+										<article>
+											<h2></h2>
+											<p></p>
+											<p></p>
+										</article>
+										<article>
+											<h2></h2>
+											<p></p>
+											<p></p>
+										</article>
+										<article>
+											<h2></h2>
+											<p></p>
+											<p></p>
+										</article>.......so on
+									</main>	
+	
+	<mark>:
+		The <mark> tag defines marked text.
+		Use the <mark> tag if you want to highlight parts of your text.
+				syntax:
+						<any tag>matter...<mark>highlighted matter</mark>matter...</any tag>
+
+
+	<aside>:
+		The <aside> tag defines some content aside from the content it is placed in.
+		The aside content should be related to the surrounding content
+		The <aside> content could be placed as a sidebar in an article.
+	<details>:
+		The <details> tag specifies additional details that the user can view or hide on demand.
+		The <details> tag can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the <details> tag.
+		The content of a <details> element should not be visible unless the open attribute is set.
+						syntax:
+							<details>
+								<summary>content to describe the matter</summary>
+								<p></P>
+								.....<p></p>
+							</details>
+		<summary>:
+			The <summary> tag defines a visible heading for the <details> element. The heading can be clicked to view/hide the details.
+ 	
+ 	<figure>:
+ 		The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+		While the content of the <figure> element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the document.
+							syntax:
+									<figure>
+										<img src="" alt="" width="" height="">
+										<figcaption>caption for the element</figcaption>
+									</figure>
+		<figcaption>:
+			The <figcaption> tag defines a caption for a <figure> element.
+			The <figcaption> element can be placed as the first or last child of the <figure> element.
+
+	<nav>:
+		The <nav> tag defines a set of navigation links.
+		Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links.
+		Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+				syntax:
+						<nav>
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+							.....<a href=""></a>
+						</nav>
+
+
+6)<form>:
+	The HTML <form> element defines a form that is used to collect user input:
+						syntax:
+								<form>
+								.
+								form elements
+								.
+								</form>
+
+	Constraint Validation HTML Input Attributes:
+			Attribute	Description
+			max	        Specifies the maximum value of an input element
+			min			Specifies the minimum value of an input element
+			pattern		Specifies the value pattern of an input element
+			required	Specifies that the input field requires an element
+
+7)  basic differences b/w HTML4.0.1 and HTML5
+		HTML:
+			-->it is an older version.
+			-->in HTML 4.0.1 we use tag <!Doctype>.
+			-->Audio and Video are not a part of HTML.
+			-->Web sockets are not available.
+			-->HTML does not allow java script to run a browser.
+			-->HTML will work with all versions.
+			--> <acronym>tag is supported by HTML.
+			--> <applet> tag supported by HTML.
+
+		HTML5:
+			-->It is a new version of HTML
+			-->In HTML5 we use a tag like <!Doctype HTML>.
+			-->Audio and Video are the integral part of the HTML5 tags such as <audio> and <video> tags.
+			-->Web sockets are available and it also provide a full duplex communication.
+			-->It allows a java script to run in a browser.
+			-->HTML5 work with all new versions such as opera,chrome,safari etc..
+			--> <accronym> tag is not supported by HTML5 instead of that tag we use <abbr>tag.
+			--> <applet> tag is not supported by HTML5 instead of that it uses <object>tag.
