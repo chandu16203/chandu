@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.red-border{
+					border: 1px solid red;
+						}
+			.orange-border{
+					border: 2px dashed orange;
+			}
+			.green{
+				color: green;
+			}
+					/*.chanduuuuuu{
+						font-weight: bold;
+					}*/
+			
+		</style>
+	</head>
+	<body>
+		<div>this is div1</div>
+		<div id="divId">this is div2</div>
+		<div>this is div3</div>
+		<div class="class1 class2">this is div4</div>
+		<div>this is div5</div>
+		<div>this is div6</div>
+		<p id="paraId">this is para1</p>
+		<p>this is para2</p>
+		<p class="class1">this is para3</p>
+		<p>this is para4</p>
+		<p class="class2">this is para5</p>
+		<p>this is para6</p>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			jQuery('#divId').addClass('red-border');
+			
+			jQuery('.class1 ,.class2').addClass('orange-border');
+			jQuery('.class1.class2').addClass('green');
+			jQuery('p').css('font-weight' ,'bold');    /*jQuery('p').addClass('chanduuuuuu');*/
+			</script>
+
+	</body>
+</html>

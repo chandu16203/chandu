@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			.red-border{
+					border: 1px solid red;
+						}
+			.orange-border{
+					border: 2px dashed orange;
+			}
+			.green-border{
+					border: 1px solid green;
+			}
+			.lightblue-border{
+					border: 1px solid lightblue;
+			}
+					/*.chanduuuuuu{
+						font-weight: bold;
+					}*/
+			
+		</style>
+	</head>
+	<body>
+		the input type attr<input><br/>
+		the input type as text<input type="text"><br/>
+		the input type as number<input type="number"><br/>
+		the input type as date<input type="date"><br/>
+		the input type as daterime-local<input type="datetime-local"><br/>
+		the input type as radio<input type="radio"><br/>
+		the input type as checkbox<input type="checkbox"><br/>
+		the input type as week<input type="week"><br/>
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script>
+			jQuery('[type=text]').addClass('red-border');
+			jQuery('[type^=date]').addClass('orange-border');/*^= means it will apply for the character for the number of times in the program*/
+			jQuery('[type$=k]').addClass('green-border'); /* $= means the type which ends with the given letter*/
+			jQuery('[type*=be]').addClass('lightblue-border');
+		</script>
+
+	</body>
+</html>

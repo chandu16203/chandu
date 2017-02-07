@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>attributeContainsPrefix demo</title>
+  <style>
+  a {
+    display: inline-block;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<a href="example.html" hreflang="en">Some text</a>
+<a href="example.html" hreflang="en-UK">Some other text</a>
+<a href="example.html" hreflang="english">will not be outlined</a>
+    the input type attr<input><br/>
+    the input type as text<input type="text"><br/>
+    the input type as number<input type="number"><br/>
+    the input type as date<input type="date time"><br/>
+    the input type as daterime-local<input type="datetime-local"><br/>
+    the input type as radio<input type="radio"><br/>
+<script>
+$( "a[hreflang|='en']" ).css( "border", "3px dotted green" );  /*jQuery("[attribute|='value']")*/
+$("[type*='te'").css("border", "2px solid red");  
+$("[type~='time'").css("border", "3px solid green");
+$("[type$='ber'").css("border", "3px solid yellows");
+
+</script>
+ 
+</body>
+</html>

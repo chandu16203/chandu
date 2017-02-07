@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<ol>
+			<li>html</li>
+			<li>css</li>	
+			<li>javascript</li>
+		</ol>
+		<ul>
+			<li>bootstrap</li>
+			<li>jQuery</li>
+			<li>angular js</li>
+		</ul>
+		<ol>
+			<li>india</li>
+			<li>usa</li>
+			<li>pakistan</li>
+			<li>australia</li>
+			<li>newzeland</li>
+		</ol>
+		<div><button>
+			this is div
+		</button></div>
+		<div><button>this is div1</button></div>
+		<div><button>this is div2</button></div>
+		<div><button>this is div3</button></div>
+		<div><button>this is div4</button></div>
+		<button>click me</button>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("ol li:first-child").hide();   /*:first-child selector*/
+				$("li:first-of-type").css("color", "red");  /*:first-of-type selector it will*/
+				/* $("ul li:last-child").hide();    :last-child selector*/ 
+				/* $("ol li:last-of-type").css("color", "green");  :last-of-child*/
+				$("ul li:nth-child(2)").hide();
+				$("ol li:nth-last-chils(3)").hide();  /*it will counts nth child from last*/
+			});
+		});
+	</script>
+
+	</body>
+</html>

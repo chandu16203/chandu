@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>basic css selectors</title>
+  <style>
+  h1 {
+    margin: 0px;
+  }
+  div, span, p {
+    width: 80px;
+    height: 40px;
+    float: left;  /*text-align*/
+    padding: 10px;
+    margin: 10px;
+    background-color: green;
+  }
+  
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<div>this is div1</div> 
+<div class="chandu1">this is div2</div> 
+<div>this is div3</div> 
+<p id="chandu">this is para1</p>
+<p>this is para2</p>
+<p>this is para3</p>
+<p id="paraId">this is para4</p>
+<p span="span">this is para5</p>
+<p class="class1">this is para6</p>
+<script>
+var elementCount = $( "*" ).css( "border", "3px solid red" ).length;	/*The prepend() method inserts specified content at the beginning of the selected elements.*/
+$( "body" ).prepend( "<h1>" + elementCount + " elements found</h1>" );   /* prepend-->$(selector).prepend(content,function(index,html))*/
+$(".class1").css("border" ,"5px solid black");  /*class selector*/
+$("div").css("border" ,"3px solid blue");  /*element selector*/
+$("#paraId").css("border" ,"2px solid orange");  /*id selector*/
+jQuery("#chandu, .chandu1, span").css("border", "5px solid black");  /*multiple selectors*/
+</script>
+ 
+
+</body>
+</html> 

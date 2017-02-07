@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hierarchy selectors</title>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div>
+			<p>this is para in div
+				<span>this is span in para and div</span>
+				</p>
+			<span>this ia span in div</span>
+			<p>this is another para in div</p>
+			<h3>this is a n heading</h3>
+		</div>
+		<script>
+			jQuery("div>p").css("font-weight", "bold");/* (parent>child)Selects all direct child elements specified by "child" of elements specified by "parent"*/
+			jQuery("div span").css("color", "red"); /* jQuery( "ancestor descendant" )ancestor: Any valid selector.
+			descendant: A selector to filter the descendant elements.  Selects all elements that are descendants of a given ancestor */
+			jQuery("p+span").css("background-color", "green");/*jQuery( "prev + next" )prev: Any valid selector.
+			next: A selector to match the element that is next to the first selector. Selects all next elements matching "next" that are immediately preceded by a sibling "prev".*/
+			jQuery("p~h3").css("color", "blue");/*jQuery( "prev ~ siblings" )prev: Any valid selector.
+			siblings: A selector to filter elements that are the following siblings of the first selector.*/
+		</script>
+
+	</body>
+</html>
