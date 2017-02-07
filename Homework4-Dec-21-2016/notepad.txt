@@ -1,0 +1,28 @@
+1)An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.
+	The list items will be marked with bullets (small black circles) by default:
+   -->An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.
+	The list items will be marked with numbers by default:
+2)img including
+	--> <img src="C:\Users\chandrakanth reddy\Pictures\FastScanner" alt="my pic">
+		The <img> tag defines an image in an HTML page.
+		The <img> tag has two required attributes: src and alt.
+		Note: Images are not technically inserted into an HTML page, images are linked to HTML pages. The <img> tag creates a holding space for the referenced image.
+3)  The <input> element is the most important form element.
+	The <input> element can be displayed in several ways, depending on the type attribute.
+		Here are some examples:
+		Type	Description
+		<input type="text"> defines a one-line input field for text input:
+		<input type="text">	Defines a one-line text input field
+		<input type="radio">	Defines a radio button (for selecting one of many choices)
+		<input type="submit">	Defines a submit button (for submitting the form)
+4)In HTML, links are defined with the <a> tag:
+	<a href="url">link text</a>
+	<a href="https://www.google.com">go to google</a>
+	for link to different part of the same web page we can use id attribute.
+	<a href="#id name"></a>
+5)  html-->this the root element fr all the web pages
+	head-->in this we have title tag which gives title for the web pages
+	body-->the entire visible part of the web pages will be comes under body element
+	these are used for creating web pages
+6)  A semantic element clearly describes its meaning to both the browser and the developer.
+	Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
