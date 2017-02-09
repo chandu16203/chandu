@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>css selectors</title>
+		<style>
+			#paraId{
+				color: red;
+				font-size: 1em;
+				
+			}
+			.class1{
+				background: blue;
+				border: 2px solid green; 
+			}
+			*{
+				background: yellow;   /*Select all elements, and set their background color to yellow:*/
+			}
+			p{
+				font-weight: bold;    /*Select and style all <p> elements:*/
+			}
+			div,h1{
+				text-align: right;   /*Select and style all <div> elements AND all <p> elements:*/
+			}
+			div p{
+				color: pink;      /*Select and style every <p> element that is inside <div> elements:*/;
+			}
+			div>p{
+				font-style: italic;   /*Select and style every <p> element where the parent is a <div> element:*/
+			}
+			div+p{
+			border: 3px dashed red;   /*Select and style every <p> element that are placed immediately after <div> elements:*/
+			}
+			a[target]{
+				background: red;   /*Style all <a> elements with a target attribute:*//*The [attribute] selector is used to select elements with the specified attribute.*/
+			}
+			a[target=_blank]{
+				font-style: italic;   /*he [attribute=value] selector is used to select elements with the specified attribute and value.*/
+			}
+			a[target~=flower]{
+				border: 5px dotted green;
+			}
+			[lang|=en] {
+		    	  background: green;  /*The [attribute|=value] selector is used to select elements with the specified attribute starting with the specified value.*/
+			}
+			div[class*="chinna"] {
+                  border: 3px solid orange;/*The [attribute*=value] selector matches every element whose attribute value containing a specified value.*/
+                }
+            div[class^="chinna"] {
+    				font-weight: bolders; /*The [attribute^=value] selector matches every element whose attribute value begins with a specified value.*/
+    			}
+		</style>
+
+
+	</head>
+	<body>
+		<h1>this is about css</h1>
+		<p id="paraId">this is para1</p>
+		<p>this is para2</p>
+		<p class="class1">this is para3</p>
+		<p class="class1 class2">this is para4</p>
+		<p>this is para5</p>
+		<p class="class2">this is para6</p>
+		<div>this is div1</div>
+		<div id="divId">this is div2</div>
+		<p>this is manju</p>
+		<div>this is div3
+			<p>this is para in div</p>
+			</div>
+		<div class="class1">this is div4</div>
+		<p>this is chandu</p>
+		<div>this is div5</div>
+		<div class="class2">this is div6</div>
+		<p>this s nandu</p>
+		<a href="https://www.google.com">google</a>
+		<a href="https://www.facebook.com" target="_blank">facebook</a>
+		<a href="https://www.yahoo.com" target="_top">yahoo</a>
+		<p lang="en">Hello!</p>
+		<p lang="en-us">Hi!</p>
+		<p lang="en-gb">Ello!</p>
+		<p lang="us">Hi!</p>
+		<div class="first_chinna">The first div element.</div>
+		<div class="second">The second div element.</div>
+		<div class="chinna">The third div element.</div>
+		<p class="chinna">This is some text in a paragraph.</p>
+	</body>
+</html>

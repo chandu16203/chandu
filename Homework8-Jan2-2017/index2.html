@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>psuedo classes and psuedo elelments</title>
+		<style>
+			p::after{
+				content: "_hi hello";/*The ::after selector inserts something after the content of each selected element(s).
+										Use the content property to specify the content to insert.*/
+										
+			}
+			div::before{
+				content: "hiiiii_";   /*Use the ::before selector to insert something before the content.*/
+			}
+			a:link{
+				color: green;			/*The :active selector is used to select and style the active link.
+
+										A link becomes active when you click on it.
+
+										Tip: The :active selector can be used on all elements, not only links.
+
+										Tip: Use the :link selector to style links to unvisited pages, the :visited selector to style links to visited pages, and the :hover selector to style links when you mouse over them.
+
+										Note: :active MUST come after :hover (if present) in the CSS definition in order to be effective!*/
+			}
+			
+			
+			a:hover{
+				color: yellow;
+			}
+			a:active{
+				color: blue;
+			}
+			a:visited{
+				color: red;
+			}
+			span:empty{
+				border: 10px solid red;  /*The :empty selector matches every element that has no children (including text nodes).*/
+			}
+			p:first-child { 
+   				 background-color: yellow;   /*The :first-child selector is used to select the specified selector, only if it is the first 										child of its parent*/
+   				}
+   			p:nth-child(3){
+   				background-color: orange;  /*The :nth-child(n) selector matches every element that is the nth child, regardless of type, of its parent.       n can be a number, a keyword, or a formula.*/
+   			}
+   			p::first-letter {
+				    font-size: 200%;
+				    color: green;   /*The ::first-letter selector is used to add a style to the first letter of the specified selector.*/
+				}
+			p::first-line {
+   				 background-color: yellow;   /*The ::first-line selector is used to add a style to the first line of the specified selector.*/
+   				}
+   			input:focus {
+				    background-color: green;   /*The :focus selector is used to select the element that has focus.*/
+				}
+			p:last-child {
+				color: red;	
+			}
+			body{
+				background-color: blue;
+			}
+			:not(p){
+				font-weight: bold;
+			}
+			p:nth-last-child(3){
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<p>this is chandu</p>
+		<p>thsis is nandu</p>
+		<p>this is naresh</p>
+		<p>To stop the degradation of the planet's natural environment and to build a future in which humans live in harmony with nature,
+		by; conserving the world's biological diversity, ensuring that the use of renewable natural resources is sustainable, and promoting the reduction of pollution and wasteful consumption.</p>
+		<p>this is ramakanth</p>
+		<p>this is tony</p>
+		<p>this is daniel</p>
+		<div>this is div1</div>
+		<div>this is div2</div> 
+		<div>this is div3</div>
+		<div>this is div4</div>
+		<div>this is div5</div>
+		<div>this is div6</div><br>
+		<span></span><br>
+		<a href="https://www.google.com">google</a><br>
+		<a href="https://www.facebook.com">facebook</a><br>
+		<a href="https://www.icloud.com">icloud login</a><br>
+		<form>
+			first name:<input type="text" name="text"><br>
+			sex:<input type="radio" name="sex" value="male">male
+			<input type="radio" checked="checked" name="sex" value="female">female<br><br>
+			Hobbies:
+			<input type="checkbox" name="hobbies" value="cricket">cricket<br>
+			<input type="checkbox" name="hobbies" value="hockey">hockey<br>
+			<input type="checkbox" checked="checked" name="hobbies" value="music">music<br>
+			<input type="checkbox" name="hobbies" value="politics">politics<br>			
+		
+		</form>
+	</body>
+</html>
