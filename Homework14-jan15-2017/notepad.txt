@@ -1,0 +1,160 @@
+
+				NUMBERS-JS
+
+
+Proerties:
+	Number.EPSILON
+	Number.MAX_SAFE_INTEGER
+	Number.MAX_VALUE
+	Number.MIN_SAFE_INTEGER
+	Number.MIN_VALUE
+	Number.NEGATIVE_INFINITY
+	Number.NaN
+	Number.POSITIVE_INFINITY
+	Number.prototype
+			-->we can get all these values directly on the browser by consoling
+						ex:Number.MAX_SAFE_INTEGER then we got the value directly
+
+
+Methods:
+	Number.isFinite()
+		-->The Number.isFinite() method determines whether the passed value is a finite number.
+		Syntax:
+				Number.isFinite(value)
+				Ex:
+					var a = Number.isFinite(100);  
+					console.log(a)      -->true
+					var num1 = Number.isFinite(null);  
+					console.log(num1)    -->false
+					var num2 = Number.isFinite(5e16);
+					console.log(num2)    --->true
+					var chandu = Number.isFinite(NaN);
+					console.log(chandu)  -->false
+
+	Number.isInteger():
+			The Number.isInteger() method determines whether the passed value is an integer.
+					Syntax:
+							Number.isInteger(value)
+					Ex:var b = Number.isInteger(6);
+						console.log(b)   -->true
+						var c = Number.isInteger(0.1);
+						console.log(c)   -->false
+						var d = Number.isInteger(Infinity);
+						console.log(d)   -->false
+	Number.isNaN():
+			The Number.isNaN() method determines whether the passed value is NaN. It is a more robust version of the original, global isNaN().
+
+					Syntax:
+							Number.isNaN(value)
+					Ex:var a = Number.isNaN(1);
+						console.log(a)                        -->false
+						var b = Number.isNaN(Infinity);
+						console.log(b)                        -->false
+						var c = Number.isNaN(null);
+						console.log(c)                        -->false
+						var d = Number.isNaN(0/0);
+						console.log(d)		                  -->true
+	Number.isSafeInteger():
+			The Number.isSafeInteger() method determines whether the provided value is a number that is a safe integer.
+						Syntax:
+								Number.isSafeInteger(testValue)
+						Ex:
+							var e = Number.isSafeInteger(7.8);
+							console.log(e)                       -->false
+							var r = Number.isSafeInteger(7);
+							console.log(r)                       -->true
+							var z = Number.isSafeInteger(Math.pow(2,53));
+							console.log(z)                       -->false
+							var n = Number.isSafeInteger(Math.pow(2,53)-1);
+							console.log(n)                       -->true
+	Number.parseFloat():
+		The Number.parseFloat() method parses a string argument and returns a floating point number. This method behaves identically to the global function parseFloat() and is part of ECMAScript 2015 (its purpose is modularization of globals).
+
+					Syntax:
+							Number.parseFloat(string)
+					Ex:
+						var a = Number.parseFloat(100);
+						console.log(a)                            --->100
+						var b = Number.parseFloat(Infinity);
+						console.log(b)                            -->Infinity
+						var c = Number.parseFloat("FF2");
+						console.log(c)                            -->NaN
+						var d = Number.parseFloat("C2");
+						console.log(d)                            -->NaN
+	Number.parseInt():
+			The Number.parseInt() method parses a string argument and returns an integer of the specified radix or base.
+
+								Syntax:
+									Number.parseInt(string,[ radix ])
+								
+
+			string:
+					The value to parse. If the string argument is not a string, then it is converted to a string (using the ToString abstract operation). Leading whitespace in the string argument is ignored.
+			radix
+					An integer between 2 and 36 that represents the radix (the base in mathematical numeral systems) of the above mentioned string. Specify 10 for the decimal numeral system commonly used by humans. Always specify this parameter to eliminate reader confusion and to guarantee predictable behavior. Different implementations produce different results when a radix is not specified, usually defaulting the value to 10.
+			Return value:
+					An integer number parsed from the given string. If the first character cannot be converted to a number, NaN is returned.
+
+					Ex:
+						var a = Number.parseInt('A',9);
+								console.log(a)                   -->NaN
+								var b = Number.parseInt('C',17);
+								console.log(b)                   -->12(C value is 12)
+								var c = Number.parseInt('100',5);
+								console.log(c)                   -->25
+	Number.toExponential():
+		The toExponential() method returns a string representing the Number object in exponential notation.
+
+					Syntax:
+							numObj.toExponential([fractionDigits])
+						Ex:
+							var numObj = 77.1234;
+							console.log(numObj.toExponential());  // logs 7.71234e+1
+							console.log(numObj.toExponential(4)); // logs 7.7123e+1
+							console.log(numObj.toExponential(2)); // logs 7.71e+1
+							console.log(77.1234.toExponential()); // logs 7.71234e+1
+							console.log(77 .toExponential());     // logs 7.7e+1
+	
+	Number.prototype.toFixed():
+		The toFixed() method formats a number using fixed-point notation.
+
+					Syntax:
+							numObj.toFixed([digits])
+						Ex:
+							var num = 142.635442;
+							console.log(num.toFixed());  // Returns '143': note rounding, no fractional part 
+							console.log(num.toFixed(1));  //142.6
+							console.log(num.toFixed(5));  //142.63544
+							console.log(32.463.toFixed(7)); //so, remaining four zero's are added to thr number     -->//32.4630000
+							console.log(2.34.toFixed(1));   //2.3
+	
+	Number.prototype.toLocaleString():
+			Syntax:
+					numObj.toLocaleString([locales [, options]])
+			Ex:
+				var b = 233356564;
+				console.log(b.toLocaleString());    //233,356,564
+
+	Number.prototype.toPrecision():
+			The toPrecision() method returns a string representing the Number object to the specified precision.
+
+					Syntax:
+							numObj.toPrecision([precision])
+					Ex:
+						var c = 5.4565432;
+						console.log(c.toPrecision());   //5.4565432
+						console.log(c.toPrecision(1));  //5
+						console.log(c.toPrecision(5));  //5.4565
+						console.log(c.toPrecision(9));  //5.45654320
+
+	Number.prototype.toString():
+			The toString() method returns a string representing the specified Number object.
+
+					Syntax:
+							numObj.toString([radix])
+					Ex:
+						var d = 274;
+						console.log(d.toString());  // directly shown as decimal value  //274
+						console.log(d.toString(2)); // convert 274 into binary values   //100010010
+						console.log(d.toString(8)); // covert into octal value          //422  
+						console.log(d.toString(16)); // convert into Hexa decimal value //112
