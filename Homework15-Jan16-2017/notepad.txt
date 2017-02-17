@@ -1,0 +1,166 @@
+STRING:
+
+String.prototype.charAt():
+		-->The charAt() method returns the specified character from a string.
+
+					Syntax:
+							str.charAt(index)
+				Ex:
+					var str = "india and pakistan";
+					console.log(str.length);  -->18
+					console.log(str.charAt(4)); -->a
+
+String.prototype.concat():
+		-->The concat() method combines the text of one or more strings and returns a new string.
+
+					Syntax:
+							str.concat(string2[, string3, ..., stringN])
+					Ex:
+						var str = "india and pakistan";
+						console.log(str.concat(" and also usa"));  // india and pakistan and also usa
+
+String.prototype.endsWith():
+		-->The endsWith() method determines whether a string ends with the characters of another string, returning true or false as appropriate.
+
+					Syntax:
+							str.endsWith(searchString)
+					Ex:
+						var str = "india and pakistan";
+						console.log(str.endsWith("stan"));     //true
+
+					Syntax:
+							str.endsWith(searchString[, position])
+					Ex:
+						console.log(str.endsWith("stan", 16)); //false
+						console.log(str.endsWith("stan", 18)); //true
+
+String.prototype.includes():
+		-->The includes() method determines whether one string may be found within another string, returning true or false as appropriate.
+
+					Syntax:
+							str.includes(searchString[, position])
+						Ex:
+							var str = "india and pakistan";
+							console.log(str.includes("pakistan"));  //true
+							console.log(str.includes("usa"));		//false
+							console.log(str.includes("pakistan", 10));	//true
+
+String.prototype.indexOf():
+		-->The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.
+
+					Syntax:
+							str.indexOf(searchValue[, fromIndex])
+					Ex:
+						var str = "india and pakistan";
+						console.log(str.indexOf("n"));    // 1
+
+String.prototype.lastIndexOf():
+		-->The lastIndexOf() method returns the index within the calling String object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if the value is not found.
+
+					Syntax:
+							str.lastIndexOf(searchValue[, fromIndex])
+					Ex:
+						var str = "india and pakistan";
+						console.log(str.lastIndexOf('a'));  //16
+
+String.prototype.repeat():
+		-->he repeat() method constructs and returns a new string which contains the specified number of copies of the string on which it was called, concatenated together.
+
+							Syntax:
+									/** 
+									 * str: String
+									 * count: Number
+									 */
+
+									let resultString = str.repeat(count)
+						Ex:
+							var str = "india and pakistan";
+							console.log(str.repeat(2));      //india and pakistanindia and pakistan
+							console.log(str.repeat(3.8));   // it will converted into integer    //india and pakistanindia and pakistanindia 																			and pakistan
+
+String.prototype.replace():
+		-->The replace() method returns a new string with some or all matches of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match.
+
+					Syntax:
+							str.replace(regexp|substr, newSubstr|function)
+					Ex:
+						var str = "india and pakistan";
+						var str2 = str.replace(/pakistan/i, "australia")
+						console.log(str2);                                    //  india and australia  
+
+String.prototype.slice():
+		-->The slice() method extracts a section of a string and returns a new string.
+		-->creates a new array out of existing array
+			-- it will not modify existing array
+					Syntax:
+							str.slice(beginIndex[, endIndex])
+					Ex:
+						var str2 = "india and australia"
+						console.log(str2.slice(6,15));   //and austr    it will displays from 6th index to 14th index(less than 1 from given 													endIndex value i.e 15)
+
+
+String.prototype.split():
+		-->The split() method splits a String object into an array of strings by separating the string into substrings.
+
+					Syntax:
+							str.split([separator[, limit]])
+					Ex:
+						var str3 = "india is a big democratic country, and have the population more than 120 crores";
+						console.log(str3);
+						console.log(str3.split(" "));    //here the seperator would be space between strings 		
+																								here the main string is splits into 14 arrays
+						console.log(str3.split(","));    //here the seperator would be cama(,) between strings      -->2 arrays 
+						console.log(str3.split("/"));    //here the seperator would be forward slash(/) between strings    -->single array
+
+String.prototype.startsWith():
+		-->The startsWith() method determines whether a string begins with the characters of another string, returning true or false as appropriate.
+
+					Syntax:
+							str.startsWith(searchString[, position])
+					Ex:
+						var str3 = "india is a big democratic country, and have the population more than 120 crores";
+						console.log(str3.startsWith("in"));    //true
+						console.log(str3.startsWith("dia"));   //false
+
+String.prototype.substr():
+		-->The substr() method returns the characters in a string beginning at the specified location through the specified number of characters. 
+
+					Syntax:
+							str.substr(startIndex [, lengthtodiasplay the Index])
+					Ex:
+						var str3 = "india is a big democratic country, and have the population more than 120 crores";
+						console.log(str3.substr(6,12));    //is a big dem
+						console.log(str3.substr(-6,3));    //cro
+
+String.prototype.substring():
+		-->substring() is similar to slice().
+			The difference is that substring() cannot accept negative indexes.
+			The substring() method returns a subset of a string between one index and another, or through the end of the string.
+
+					Syntax:
+							str.substring(indexStart[, indexEnd])
+					Ex:
+						var str3 = "india is a big democratic country, and have the population more than 120 crores";
+						console.log(str3.substring(3,10));  //here from 3rd index to 9th index values are displayed   -->ia is a
+						console.log(str3.substring(6,25));  //here from 6th index to 24th index values are displayed  -->is a big democratic
+
+String.prototype.toLowerCase():
+		-->The toLocaleLowerCase() method returns the calling string value converted to lower case, according to any locale-specific case mappings.
+
+					Syntax:
+							str.toLocaleLowerCase()
+					Ex:
+						var str4 = "APPLE";
+						var str5 =str4.toLowerCase();  //converts into lower case
+						console.log(str5);        //"apple" is the output
+
+String.prototype.toUpperCase():
+		-->The toUpperCase() method returns the calling string value converted to upper case.
+
+					Syntax:
+							str.toUpperCase()
+					Ex:
+						var str5 = "apple";
+						var str6 =str5.toUpperCase();
+						console.log(str6);   //converts into uppercase       // "APPLE" is the final output
+

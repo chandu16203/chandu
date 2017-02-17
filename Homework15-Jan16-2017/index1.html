@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>array</title>
+	</head>
+	<body>
+		<script>
+			var arr = [];
+			console.log(arr.length);
+			var fruites = ['mango', 'orange', 'banana'];
+			console.log(fruites.length);
+			console.log(fruites[0]);    //mango
+			console.log(fruites[2]);    //banana
+			console.log(fruites[fruites.length - 2]);   //orange
+			var a = [1, 2, 3];
+			a.push(8);
+			console.log(a);   //[1,2,3,8] 8 will be added to the current array
+			console.log(a.push(8),a);   // 5,[1,2,3,8,8] another 8 will be aqdded to the array and 5 will be the length of the array
+			a.pop();       //last item will be removed from array when pop() applied
+			console.log(a);  //[1,2,3,8]
+			a.pop();   // another last element will be removed from the array 
+			console.log(a);   //[1,2,3]
+			a.unshift(0);   // adding a value at the start of the array
+			console.log(a);  //[0,1,2,3]
+			a.unshift(-2,-1);
+			console.log(a);  //[-2,-1,0,1,2,3]
+			a.shift();    // removing an item from the start of an array
+			console.log(a);   //[-1,0,1,2,3]
+			a.shift();
+			console.log(a);  //[0,1,2,3]
+			console.log(Array(6));   //[] this is an empty array with length 6
+			console.log(Array(6).length);
+			console.log(Array.of(7));   //[7] this an array with 7 is the single element and the length is 1
+			console.log(Array.of(7).length);
+			var arr1 = ['Hi', 'this', 'is', 'chandu'];
+			var arr2 = ['And', 'i', 'am', 'from', 'India'];
+			var arr3 = arr1.concat(arr2);   // (or) console.log(arr1.concat(arr2));  // combine both the arrays
+			console.log(arr3);
+			console.log(arr3.copyWithin(3));  // it repeats first 3 items and then continues without changing the length array
+			console.log(arr3.copyWithin(3,0));  
+			console.log(Array.isArray([1, 2, 3]));  // true
+            console.log(Array.isArray({foo: 123})); // false
+            console.log(Array.isArray(undefined));   //false
+            console.log(arr1.entries(),arr1);
+
+            var b = [15,27,12,45,86,22];
+            var c = [34,2,545,23,56,86,98];
+            console.log(b.every(x => x >= 100));  // it will checks weather the given condition true or not    -->true
+            console.log(c.every(x => x <= 546));  //it will checks weather the given condition true or not     -->false
+            console.log(b.filter(x => x <= 34));   // it will filter the values based on condition    -->[15,27,12,22]
+            console.log(c.filter(x => x >= 100));  // it will filter the values based on condition    -->[545]
+            console.log(b.fill(2));     // it will fills all the items with the given value
+            console.log(c.fill(4,3));     //it will fills with the element 4 from 3 index value 
+         	</script>
+	</body>
+</html>

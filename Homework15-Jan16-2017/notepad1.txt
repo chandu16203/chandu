@@ -1,0 +1,92 @@
+ARRAYS
+
+array:
+	The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.
+
+Array.prototype:
+	The Array.prototype property represents the prototype for the Array constructor and allows you to add new properties and methods to all Array objects.
+Array.of():
+	The Array.of() method creates a new Array instance with a variable number of arguments, regardless of number or type of the arguments.
+	---->The difference between Array.of() and the Array constructor is in the handling of integer arguments:
+		 Array.of(7) creates an array with a single element, 7,
+		 	 whereas Array(7) creates an empty array with a length property of 7 
+
+		 Ex:
+		 	console.log(Array(6));   //[] this is an empty array with length 6
+			console.log(Array(6).length);    //6
+			console.log(Array.of(7));   //[7] this an array with 7 is the single element and the length is 1
+			console.log(Array.of(7).length);    //1
+
+Array.prototype.concat():
+	-->The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
+							Syntax:
+									var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+							Ex:
+							var arr1 = ['Hi', 'this', 'chandu'];
+							var arr2 = ['And', 'i', 'am', 'from', 'India'];
+							console.log(arr1.concat(arr2));  // combine both the arrays    
+
+							  result:['Hi', 'this', 'chandu', 'And', 'i', 'am', 'from', 'India']
+
+Array.isArray():
+		-->The Array.isArray() determines whether the passed value is an Array.
+									Syntax:
+										Array.isArray(obj)
+									Ex:
+										console.log(Array.isArray([1, 2, 3]));  // true
+							            console.log(Array.isArray({foo: 123})); // false
+							            console.log(Array.isArray(undefined));   //false
+
+Array.prototype.entries():
+		-->The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+
+									Syntax:
+											a.entries()
+									Ex:
+										var arr1 = ['Hi', 'this', 'is', 'chandu'];
+										console.log(arr1.entries(),arr1);   
+												output:		//Array Iterator {}__proto__: Array Iterator ["Hi", "this", "is", "chandu"]
+
+
+Array.prototype.every():
+		-->The every() method tests whether all elements in the array pass the test implemented by the provided function.
+							Syntax:
+									arr.every(callback[, thisArg])
+									Parameters
+
+			callback ---->  Function to test for each element, taking three arguments:
+			currentValue (required)--->		The current element being processed in the array.
+			index (optional) -->	The index of the current element being processed in the array.
+			array (optional) --->	The array every was called upon.
+			thisArg --->	Optional. Value to use as this when executing callback.
+			Return value  --->   true if the callback function returns a truthy value for every array element; otherwise, false.
+
+						Ex: 
+							var b = [15,27,12,45,86,22];
+				            var c = [34,2,545,23,56,86,98];
+				            console.log(b.every(x => x >= 100));  // it will checks weather the given condition true or not    -->true
+				            console.log(c.every(x => x <= 546));  //it will checks weather the given condition true or not     -->false
+
+Array.prototype.filter():
+			--->The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+									Syntax:
+											var newArray = arr.filter(callback[, thisArg])
+									Ex:
+										var b = [15,27,12,45,86,22];
+				            			var c = [34,2,545,23,56,86,98];
+										console.log(b.filter(x => x <= 34));   // it will filter the values based on condition    																	-->[15,27,12,22]
+            							console.log(c.filter(x => x >= 100));  // it will filter the values based on condition    -->[545]
+
+
+Array.prototype.fill():
+			-->The fill() method fills all the elements of an array from a start index to an end index with a static value.
+							Syntax:
+									arr.fill(value)
+									arr.fill(value, start)
+									value---->		Value to fill an array.
+									start Optional  --->	Start index, defaults to 0.
+							Ex:
+								var b = [15,27,12,45,86,22];
+            					var c = [34,2,545,23,56,86,98];
+								console.log(b.fill(2));     // it will fills all the items with the given value   -->[2,2,2,2,2,2]
+            					console.log(c.fill(4,3));     //it will fills with the element 4 from 3 index value  -->[34,2,545,4,4,4,4]

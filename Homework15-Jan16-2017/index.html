@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>string</title>
+	</head>
+	<body>
+		<script>
+			var str = "india and pakistan";
+			console.log(str.length);
+			console.log(str.charAt(4)); //it will display the character present at the given index
+			console.log(str.charCodeAt(8));
+			console.log(str.concat(" and also usa"));
+			console.log(str.endsWith("stan"));
+			console.log(str.endsWith("stan", 16));
+			console.log(str.endsWith("stan", 18));
+			console.log(str.includes("pakistan"));
+			console.log(str.includes("usa"));
+			console.log(str.includes("pakistan", 10));
+			console.log(str.indexOf("n"));
+			console.log(str.lastIndexOf('a'));
+			console.log(str.repeat(2));
+			console.log(str.repeat(3.8));  // it will converted into integer
+			var str2 = str.replace(/pakistan/i, "australia")
+			console.log(str2);
+			console.log(str2.slice(6,15));
+			var str3 = "india is a big democratic country, and have the population more than 120 crores";
+			console.log(str3);
+			console.log(str3.split(" "));    //here the seperator would be space between strings
+			console.log(str3.split(","));    //here the seperator would be cama(,) between strings
+			console.log(str3.split("/"));    //here the seperator would be forward slash(/) between strings
+			console.log(str3.startsWith("in"));
+			console.log(str3.startsWith("dia"));
+			console.log(str3.substr(6,12));  
+			console.log(str3.substr(-6,3));
+			console.log(str3.substring(3,10));  //here from 3rd index to 9th index values are displayed
+			console.log(str3.substring(6,25));  //here from 6th index to 24th index values are displayed
+			var str4 = "APPLE";
+			var str5 =str4.toLowerCase();  //converts into lower case
+			console.log(str5);
+			var str6 =str5.toUpperCase();
+			console.log(str6);   //converts into uppercase
+			var str1 = "   chintu and ramu  ";
+			console.log(str1.length);  //20
+			console.log(str1.trim());  //remove all the spaces left and right     //'chintu and ramu'
+			var str7 = str1.trimLeft();  //remove spaces at left side
+			console.log(str7.length);   //17
+			console.log(str7);    //'chintu and ramu   '
+			console.log(str1.trimRight());  //'   chintu and ramus'
+
+
+			</script>
+	</body>
+</html>
+
+
