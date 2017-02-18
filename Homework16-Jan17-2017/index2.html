@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr = ["one", "two", "threee", "four", "five"]
+			console.log(arr.slice(3));
+			console.log(arr.slice(1,3));  
+			var a = ["apple", "orange", "mango", "banana"]
+			a.splice(2, 0, "papaya");
+			console.log(a);
+			a.splice(1, 2, "hi", "hello");
+			console.log(a);
+
+			var arr1 = [3, 2, 5, 8, 26];
+			var arr2 = arr1.reduce(function(accumulator, item, index, array){
+				return accumulator+item;
+			})
+			console.log(arr2);
+			var arr2 = arr1.reduce(function(accumulator, item, index, array){
+				return accumulator*item;
+			})
+			console.log(arr2);
+		</script>
+	</body>
+</html>

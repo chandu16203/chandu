@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var arr = ["hi", "this", "is", "chandrakanth", "reddy"];
+			console.log(arr);
+			console.log(arr.indexOf("is"));
+			var arr1 = ["hi", "this", "is", "chandrakanth", "reddy","hi", "this", "is", "chandrakanth", "reddy"];
+			console.log(arr1);	
+			console.log(arr1.lastIndexOf("this"));
+			console.log(arr1.lastIndexOf("is"));
+			arr1.forEach(function(item, index, array){
+				console.log("The item name is:", item , ". The index value is :", index , ".The compleate array is :", array)
+			})
+			var arr2 = ["hi", "everyone", "how", "are", "you", "all"];
+			var arr3 = arr2.map(function(item, index, array){
+				return item +" "+ index;
+			})
+			console.log(arr3);
+			console.log(arr2.join());
+			console.log(arr2.join(''));
+			console.log(arr2.join(' '));
+
+			
+		</script>
+	</body>
+</html>

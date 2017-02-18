@@ -1,0 +1,154 @@
+Array.prototype.indexOf():
+		-->The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+							Syntax:
+									arr.indexOf(searchElement)
+									arr.indexOf(searchElement, fromIndex)
+							Ex:
+							var arr = ["hi", "this", "is", "chandrakanth", "reddy"];
+							console.log(arr);
+							console.log(arr.indexOf("is"));      //2
+
+Array.prototype.lastIndexOf():
+		-->The lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+							Syntax:
+									arr.lastIndexOf(searchElement)
+									arr.lastIndexOf(searchElement, fromIndex)
+							Ex:
+								var arr1 = ["hi", "this", "is", "chandrakanth", "reddy","hi", "this", "is", "chandrakanth", "reddy"];
+								console.log(arr1);	
+								console.log(arr1.lastIndexOf("this"));    //6
+								console.log(arr1.lastIndexOf("is"));      //7
+
+Array.prototype.forEach():
+		-->The forEach() method executes a provided function once for each array element.
+							Syntax:
+									arr.forEach(function callback(currentValue, index, array) {
+									    //your iterator
+
+									}[, thisArg]);
+		Parameters:
+
+				callback ==> Function to execute for each element, taking three arguments:
+						
+						currentValue ==> The current element being processed in the array.
+						index ==> The index of the current element being processed in the array.
+						array ==> The array that forEach() is being applied to.
+				
+				thisArg Optional ==> Value to use as this(i.e reference Object) when executing callback.
+				Return value ==> undefined.
+
+ Array.prototype.map():
+ 		--> map(callback(item, index, array))
+			-- call back will be invoked for every item in the array
+			-- out of the return values from the callback function. create a new array and retrurn it
+							Syntax:
+									var new_array = arr.map(callback[, thisArg])
+
+Array.prototype.join():
+		-->The join() method joins all elements of an array (or an array-like object) into a string.
+						Syntax:
+								arr.join()
+								arr.join(separator)
+
+Array.prototype.slice():
+			-- creates a new array out of existing array
+			-- it will not modify existing array    // it will display fronm firstIndex to till lastIndex-1
+			Syntax :
+				 var newArr = oldArr.slice(firstIndex, lastIndex);
+					newArr --> [oldArr[firstIndex],oldArr[firstIndex+1],oldArr[firstIndex+2],... 
+
+								----->	arr.slice()
+										arr.slice(begin)
+										arr.slice(begin, end)
+				Ex:
+					var arr = ["one", "two", "threee", "four", "five"]
+					console.log(arr.slice(3));     //  ["four", "five"]
+					console.log(arr.slice(1,3));   //  ["two", "threee"]
+													
+
+Array.prototype.splice():
+		-->The splice() method changes the contents of an array by removing existing elements and/or adding new elements.
+		-- it will modify the existing array
+			-- you can add items into array 
+
+					Syntax : 
+							arr.splice(firstIndex, deleteCount,itemtoAdd1, itemtoAdd2,...)
+
+								Syntax:
+										array.splice(start)
+										array.splice(start, deleteCount)
+										array.splice(start, deleteCount, item1, item2, ...)
+					Ex:
+						var a = ["apple", "orange", "mango", "banana"]
+						a.splice(2, 0, "papaya");  		// here 2 is the firstIndex and delete count is 0 and "papaya" is added after index-2
+						console.log(a);						//["apple", "orange", "papaya", "mango", "banana"]
+						a.splice(1, 2, "hi", "hello");  //here 1 is the firstIndex and then 2 items are deleted and "hi", "hello" are added 																											after index-1
+						console.log(a);						//["apple", "hi", "hello", "mango", "banana"]
+
+Array.prototype.reduce():
+		-->The reduce() method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+								Syntax:
+										arr.reduce(callback, [initialValue])
+
+			Parameters:
+
+				callback ==>	Function to execute on each value in the array, taking four arguments:
+						accumulator ==>	The accumulated value previously returned in the last invocation of the callback, or initialValue, if supplied. 
+						currentValue ==>	The current element being processed in the array.
+						currentIndex ==>	The index of the current element being processed in the array. Starts at index 0, if an initialValue is provided, and at index 1 otherwise.
+						array ==>	The array reduce was called upon.
+				Ex:
+				var arr1 = [3, 2, 5, 8, 26];
+				var arr2 = arr1.reduce(function(accumulator, item, index, array){
+					return accumulator+item;
+				})
+				console.log(arr2);    //added 44
+				var arr2 = arr1.reduce(function(accumulator, item, index, array){
+					return accumulator*item;
+				})
+				console.log(arr2);   //multiply 6240
+
+2)we can create an object by this ways
+		-- var obj = {};            // object literal
+		-- var obj1 = new Object(); // using new keyword and constructor 
+
+3)properties in objects ==>
+							-- we have key(propertyName) and value(propertyValue) pairs within object
+							-- propertyName always has to be a string
+							-- propertyValue can be any java script datatype.
+							-- propertyName and value and seperated by colon (:)
+							-- two properties are seperated by comma(,)
+							ex : 
+								-- {
+									prop1 : value1,
+									prop2 : value2
+								}
+
+4)get a property value using key(retrieve a property value in object) (propetyName)
+		 syntax: 
+				-- objectName.propertyName;
+				-- objectName['propertyName'];
+
+5)add a property to an object 
+		 syntax:
+				-- objectName.propertyName = value
+				-- objectName['propertyName'] = value
+
+6)remove a property from an object
+		 syntax:
+				-- delete objectName.propertyName
+				-- delete objectName['propertyName']
+
+7)update a property value of an object
+		 syntax: 
+				-- objectName.propertyName = value
+				-- objectName['propertyName'] = value
+
+8)check is a propertyName exists?
+		 syntax: 
+				-- object.hasOwnProperty('propertyName')
+					-- true -- then property exists
+					-- false -- then property doesnot exists
+
+
+
