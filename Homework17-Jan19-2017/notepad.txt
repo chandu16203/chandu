@@ -1,0 +1,104 @@
+1) Object.defineProperty():
+		-->The Object.defineProperty() method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+
+					Syntax:
+							Object.defineProperty(obj, prop, descriptor)
+	--->Parameters:
+
+					obj::: The object on which to define the property.
+					prop::: The name of the property to be defined or modified.
+					descriptor::: The descriptor for the property being defined or modified.
+
+		==>-- add or modify existing properties
+				-- provide configuration about delete or changing in future.
+
+
+
+	configurable ::
+			true if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.
+			          --> Defaults to false.
+	enumerable ::
+			true if and only if this property shows up during enumeration of the properties on the corresponding object.
+					  --> Defaults to false.
+	
+	A data descriptor also has the following optional keys:
+
+			value ::
+						The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).
+						Defaults to undefined.
+			writable ::
+						true if and only if the value associated with the property may be changed with an assignment operator.
+						Defaults to false.
+			
+	An accessor descriptor also has the following optional keys:
+
+			get ::
+			       A function which serves as a getter for the property, or undefined if there is no getter. The function return will be used as the value of property.
+			       --> Defaults to undefined.
+			set ::
+					A function which serves as a setter for the property, or undefined if there is no setter. The function will receive as only argument the new value being assigned to the property.
+				   --> Defaults to undefined.
+
+2)The Object.defineProperties():
+	The Object.defineProperties() method defines new or modifies existing properties directly on an object, returning the object.
+
+					Syntax:
+							Object.defineProperties(obj, props)
+		=>-- ability to add or modify mutliple properties at once.
+
+3)Object.create(proptotypeObject)
+	-- create a new object out of prototype object
+	The Object.create() method creates a new object with the specified prototype object and properties.
+
+					Syntax:
+							Object.create(proto[, propertiesObject])
+
+
+		Object.keys(objectName):
+			-- retrieve all propertyName(keys) in the object
+
+				-->The Object.keys() method returns an array of a given object's own enumerable properties, in the same order as that provided  sby a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+
+						Syntax:
+								Object.keys(obj)
+
+4)Creating a new object using function
+	
+	function func1() {
+
+	}
+	var f1 = new func1(); //
+	-- using new functionName() --> we can create new objects.
+
+	new functionName(); --> we can create a new object
+
+	"this" --> refers to current object
+
+	when creating a new object --> this keyword would refer to the currentObject.
+5)prototype: and "this" keyword:: 
+
+	--> every object inherits from its prototype Object in java script
+
+
+	--> Objects can be created using functions
+	--> The prototype Object of the function will be inherited by all the object created from same function
+
+	function Person(na, ag) {
+		this.name = na;
+		this.age = ag;
+	} 
+	// Person --> function
+	// functionName.prototype.propertyName = value;
+
+	Person.prototype.nationality = 'global citizen';
+
+	// p1, p2, p3 will inherit the same prototype object of Person
+
+
+	var p1 = new Person('javascript', 43);
+	var p2 = new Person('jhon', 56);
+	var p3 = new Person('usha', 78);
+
+7)window --> all global varibles will be attached to window object.
+
+8)callback --> able to pass one function into another function its a callback.
