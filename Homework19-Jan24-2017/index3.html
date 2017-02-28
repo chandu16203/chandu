@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a = 97;   // Global variable 
+			function outerFunc(){
+				 a = 736; 
+				function innerFunc(){
+					 a = 343;
+					console.log(a);
+				}
+				innerFunc();
+				console.log(a);
+			}
+			outerFunc();
+			console.log(a);
+		</script>
+	</body>
+</html>
