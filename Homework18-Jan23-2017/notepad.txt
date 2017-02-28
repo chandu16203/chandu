@@ -1,0 +1,50 @@
+ 1) using call : 
+			--> we are executing the function
+			--> parameters are passed as individually
+			--> we can change the value of "this" keyword
+			general function invocation 	
+			syntax : functionName(param1, param2, param3 ...);
+
+			call syntax : functionName.call(objectName, param1, param2, param3 ...)
+
+	using apply : 
+				--> we are executing the function
+				--> parameters are passed as array
+				--> we can change the value of "this" keyword
+				general function invocation 	
+				syntax : functionName(param1, param2, param3 ...);
+
+				apply syntax : functionName.apply(objectName, [param1, param2, param3 ...])
+
+	using bind :
+				--> create a new function out of existing function. 
+				--> new function this keyword will always(permamnently) be objectName
+				var newFunc = oldFunc(objectName);
+
+
+2)Context:
+		Context is related to objects. It refers to the object within which a function is executed. When you use the JavaScript keyword “this”, that word refers to the object that the function is executing in. Scope refers to the visibility of variables, and scope refers to the context within which a function is executed.
+
+3)Lexical scoping:
+		Lexical scoping (sometimes known as static scoping ) is a convention used with many programming languages that sets the scope (range of functionality) of a variable so that it may only be called (referenced) from within the block of code in which it is defined. The scope is determined when the code is compiled. A variable declared in this fashion is sometimes called a private variable.
+
+		The opposite approach is known as dynamic scoping . Dynamic scoping creates variables that can be called from outside the block of code in which they are defined. A variable declared in this fashion is sometimes called a public variable.
+
+4)for-in loop:
+		Definition and Usage:
+			The for/in statement loops through the properties of an object.
+
+			The block of code inside the loop will be executed once for each property.
+
+			JavaScript supports different kinds of loops:
+
+			for - loops through a block of code a number of times
+			for/in - loops through the properties of an object
+			while - loops through a block of code while a specified condition is true
+			do/while - loops through a block of code once, and then repeats the loop while a specified condition is true
+			Note: Do not use the for/in statement to loop through arrays where index order is important. Use the for statement instead.
+
+							Syntax:
+								for (var in object) {
+								    code block to be executed
+								}

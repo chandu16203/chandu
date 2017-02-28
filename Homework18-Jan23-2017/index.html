@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var person = {
+				name : 'mike',
+				age : 40,
+				nationality : 'australia',
+				getAge : function(){
+					return this.age;
+				}
+			}
+			console.log(person.getAge());
+			var getFunc = person.getAge;
+			console.log(typeof getFunc);
+			console.log(getFunc());
+
+
+			var obj = {
+				age : 39398,
+			}
+			console.log(getFunc.call(obj));
+		</script>
+	</body>
+</html>
