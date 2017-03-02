@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a = 30;
+			function add(a,b){    // for excuting this function we need to call the function 
+				return a+b;
+			}
+			(function(){
+				var b = 48         //this can be invoked immediately after declaring the function but excuted only once
+			})()
+			var module = (function(){
+				var a;
+				function getA(){
+					return a;
+				}
+				function setA(value){
+					a = value;
+				}
+				return {
+					getA : getA,
+					setA : setA
+				}
+			})();		
+			var person = (function(){
+					var name;
+					var age;
+					function getAge() {
+						return age;
+					}
+					function setAge(value) {
+						if(value < 0 || value>100){
+							console.log('the value of age can between 0 to 100');
+						}
+							 else {
+							age = value;
+							}
+					}
+					return {
+						getAge : getAge,
+						setAge : setAge
+					}
+			})();  
+		</script>
+	</body>
+</html>

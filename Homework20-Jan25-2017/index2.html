@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<button onclick="func()" oncontextmenu="func1()" ondblclick="func2()" onmouseenter="func3()" onmouseleave="func4()">click me</button>
+		<input type="text" onfocus="func5()" onblur="func6()" onchange="func7()">
+		<script>
+			function func(){
+				console.log('You have clicked on me')
+			}
+			function func1(){
+				console.log('You have right clicked on me')
+			}
+			function func2(){
+				console.log('You have Double clicked on me')
+			}
+			function func3(){
+				console.log('Your mouse enterd on the button')
+			}
+			function func4(){
+				console.log('Your mouse left the button')
+			}
+			function func5(){
+				console.log('You have focused on the input')
+			}
+			function func6(){
+				console.log('You left the(blur) input')
+			}
+			function func7(){
+				console.log('You have changed the input')
+			}
+		</script>
+	</body>
+</html>
