@@ -1,0 +1,62 @@
+1)IIFE:
+	An IIFE is an anonymous function that is created and then immediately invoked. It's not called from anywhere else (hence why it's anonymous), but runs just after being created.
+
+	function displayMessage() {
+					 alert( "Hello" )
+					  }                        //is a function declaration,whereas
+
+    var displayMessage = function() {
+    						 alert( "Hello" );
+    						  }                 //	is function expression.
+
+		If you want to call the above function, you have to call with the function name  displayMessage();Only if you call the function it will get executed.whereas the immediately invoked function will executed immediately after the function is declared.
+		
+		Example:
+		<script>
+		(function(){
+		a=10;
+		})()
+		document.write(a);
+		</script>
+		In the above example value of a is accessible outside the function without calling the function  explicitly.
+
+
+		It does three things in 1 statement.
+			1. Creates a function instance.
+			2. Executes the function.
+			3. Discard the function. The function created was an anonymous function and after the statement there is not reference to it.
+				If any inner function is defined in the IIFE statement then a closure is created for the inner function. Whenever the inner function is invoked it has access to all the variables it got inside the closure
+
+
+2)Namespacing:
+		In many programming languages, namespacing is a technique employed to avoid collisions with other objects or variables in the global namespace. They're also extremely useful for helping organize blocks of functionality in your application into easily manageable groups that can be uniquely identified.
+
+3)Module Pattern:
+	we don't have to return all the variables, we have to return only necessary variables.
+
+5)HTML DOM Events:
+	HTML DOM events allow JavaScript to register different event handlers on elements in an HTML document.
+
+	Events are normally used in combination with functions, and the function will not be executed before the event occurs (such as when a user clicks a button).
+
+	Tip: The event model was standardized by the W3C in DOM Level 2.
+
+	HTML DOM Events
+	DOM: Indicates in which DOM Level the property was introduced
+
+6)The addEventListener() method attaches an event handler to the specified element.
+
+	The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+
+	You can add many event handlers to one element.
+
+	You can add many event handlers of the same type to one element, i.e two "click" events.
+
+	You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+
+	The addEventListener() method makes it easier to control how the event reacts to bubbling.
+
+	When using the addEventListener() method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.
+
+	You can easily remove an event listener by using the removeEventListener() method.
+
