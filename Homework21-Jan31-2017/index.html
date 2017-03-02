@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<p onclick="alert('clicked on para')">this is para</p>
+		<div>this is div 1</div>
+		<div id="divId">this is div 2</div>
+		<div>this is div 3</div>
+		<div class="class1">this is div 4</div>
+		<div>this is div 5</div>
+		<div class="class2">this is div 6</div>
+		<p>this is para1</p>
+		<p>this is para2</p>
+		<p class="class2">this is para3</p>
+		<p id="paraId">this is para4</p>
+		<p class="class1">this is para5</p>
+		<p>this is para6</p>
+		<script>
+			document.getElementById('divId').addEventListener('click', function(event){
+				alert('you have clicked on div with divId')
+			});
+			document.getElementsByTagName('div')[0].addEventListener('click', function(event){
+				alert('you have clicked on div with divId')
+			});
+
+			var divs = document.getElementsByTagName('div');
+			for (var i=0; i<divs.length; i++)
+				divs[i].addEventListener('click', function(event){
+				alert(event.target.innerHTML);
+			});
+		</script>
+	</body>
+</html>

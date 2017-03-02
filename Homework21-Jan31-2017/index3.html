@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+				#divId {
+						border: 1px solid red;
+					}
+					#paraId {
+						border: 1px solid black;
+					}
+			</style>
+	</head>
+	<body>
+		EVENT CAPTURING
+			<div id="divId">
+				This is div
+				<p id="paraId">
+					this para is in div
+				</p>
+			</div>
+			<script>
+				document.getElementById('divId').addEventListener('click', function(event){
+					alert('you have clicked on div');
+				}, true);
+				document.getElementById('paraId').addEventListener('click', function(event){
+					alert('you have clicked on para in div');
+				});
+			</script>
+	</body>
+</html>

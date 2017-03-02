@@ -1,0 +1,35 @@
+1)addEventListener():
+	The addEventListener() method attaches an event handler to the specified element.
+	Tip: Use the removeEventListener() method to remove an event handler that has been attached with the addEventListener() method.
+	Tip: Use the document.addEventListener() method to attach an event handler to the document.
+				Syntax:
+			element.addEventListener(event, function, useCapture)
+
+
+3)Id:
+	 The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document). The id attribute is most used to point to a style in a style sheet, and by JavaScript (via the HTML DOM) to manipulate the element with the specific id.
+	class:
+		The class attribute specifies one or more classnames for an element. The class attribute is mostly used to point to a class in a style sheet. However, it can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class.
+	Tag:
+		HTML tags are the hidden keywords within a web page that define how the browser must format and display the content. Most tags must have two parts, an opening and a closing part. For example, <html> is the opening tag and </html> is the closing tag.
+
+5),6)Event Propogation:
+ 		if you have event listener on both of them
+		--> if you have dispacthed event on child(descendent) element. 
+
+		event bubling (from inside out):
+		--> child(descendent) event handler is invoked first
+		--> parent(ancestor) event hanlder is invoked next
+			syntax : 
+				.addEventListener(event, handler, captureFlag)
+
+				captureFlag -- false or undefined or parameter not given
+
+
+		event capturing (from out and the inside):
+		--> parent(ancestor) event handler is invoked first
+		--> child(descendent) event hanlder is invoked next
+			syntax : 
+				.addEventListener(event, handler, captureFlag)
+
+				captureFlag -- true
