@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>content filter selectors</title>
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+			<p>this is chadu</p>
+			<p>this is chadrakanth reddy</p>
+			<p>this is chadrashekhar reddy</p>
+			<div>
+				<p>this is naresh</p>
+				<p>this another para in div</p>
+				</div>
+			<div>this is another divs</div>
+			<p>this is raghavender reddy</p>
+			<p>this is john abraham</p>
+			<table border="2">
+			  <tr><td>TD #0</td><td></td></tr>
+			  <tr><td>TD #2</td><td></td></tr>
+			  <tr><td></td><td>TD#5</td></tr>
+			</table>
+		<script>
+			$("p:contains('reddy')").css("color", "red");  /*it will highlights the part present in contains part*/
+			$( "td:empty" ).text( "cell!" ).css( "background", "blue" );  /*Select all elements that have no children (":empty")selector*/
+			$("div:has(p)").css("color", "green"); /* Selects elements which contain at least one element that matches the specified selector.*/
+			$("td:parent").css("color", "yellow");  /*This is the inverse of (:empty)-->(:parent)selector.*/
+		</script>
+	</body>
+</html>
