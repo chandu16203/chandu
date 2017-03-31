@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			String.prototype.myUpperCase = function(){
+				var str = this;
+				var result = " ";
+				for(i=0; i<str.length; i++){
+					if(str.charCodeAt(i)>=97 && str.charCodeAt(i)<=122){
+						result = result + String.fromCharCode(str.charCodeAt(i) - 32)
+					}
+					else{
+						result = result + str.charAt(i);
+					}
+				}
+				return result;
+			};
+			var a = "chandu";
+			console.log(a.myUpperCase());
+		</script>
+	</body>
+</html>

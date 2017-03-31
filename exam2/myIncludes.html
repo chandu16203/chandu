@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a="hi how are you all";
+			String.prototype.myIncludes = function(char){
+				var str = this;
+				for(var i=0; i<str.length; i++){
+					if(str.charAt(i) == char){
+						return true;
+					}
+				}
+				return false;
+			}
+			console.log(a.myIncludes("a"));
+			</script>
+	</body>
+</html>

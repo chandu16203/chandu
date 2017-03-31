@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+			<script>
+				var a = "california";
+				console.log(a.charAt(3));   //i
+				console.log(a.charCodeAt("c"));    //99
+				console.log(a.concat(" and arkansas"));   //california and arkansas
+				console.log(a.endsWith("ia"));   //true
+				console.log(a.endsWith("orni"));    //false
+				console.log(a.includes("lif"));     //true
+				console.log(a.includes("iaz"));     //false
+				console.log(a.indexOf("i"));        //3
+				console.log(a.indexOf("o"));        //5
+				console.log(a.indexOf("a"));        //1
+				console.log(a.lastIndexOf("a"));    //9
+				console.log(a.repeat(3));           //californiacaliforniacalifornia
+				var str = "Hello all";	
+				console.log(str.replace("Hello", "Hi"));	 //Hi all
+				var b = "CHANDU";
+				console.log(b.toLowerCase());      //chandu
+				var c = "chandu";
+				console.log(b.toUpperCase());      //CHANDU
+				console.log(str.split(" "));       //["Hello", "all"]
+				console.log(str.split(","));       //["Hello all"]
+				var d = "        hi how are you     ";
+				console.log(d.trim());     //hi how are you
+				console.log(String.fromCharCode(104));    //h
+				console.log(String.fromCharCode(122));    //z
+				console.log(String.fromCharCode(82));     //R
+				console.log(str.substr(2,6));      //llo al
+			</script>
+	</body>
+</html>

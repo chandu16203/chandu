@@ -1,0 +1,40 @@
+1)The HTML DOM (Document Object Model)
+	With the HTML DOM, JavaScript can access and change all the elements of an HTML document.
+
+
+
+
+
+
+
+4)jQuery is a JavaScript library.
+	The purpose of jQuery is to make it much easier to use JavaScript on your website.
+	jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+	jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+	The jQuery library contains the following features:
+
+	HTML/DOM manipulation
+	CSS manipulation
+	HTML event methods
+	Effects and animations
+	AJAX
+	Utilities
+	Tip: In addition, jQuery has plugins for almost any task out there.
+
+6)jQuery Syntax. The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s). ...
+	 A $ sign 	to define/access jQuery. A (selector) to "query (or find)" HTML elements.
+
+	 jQuery Syntax:
+			The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).
+			Basic syntax is: $(selector).action()
+
+			A $ sign to define/access jQuery
+			A (selector) to "query (or find)" HTML elements
+			A jQuery action() to be performed on the element(s)
+
+7)Two versions of JQuery.
+		Versions of 2.x leave behind the older Internet Explorer 6, 7, and 8 browsers. 
+		In return they are smaller, faster
+		The jQuery team still supports the 1.x branch which does run on IE 6/7/8.
+		if you’re one of those lucky developers who has dropped support for IE6/7/8, grab jQuery 2.0 and don’t look back.

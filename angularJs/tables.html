@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>angularJS sample Tables</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<style>
+         table, th , td {
+            border: 1px solid red;
+            border-collapse: collapse;
+            padding: 10px;
+         }
+         
+         table tr:nth-child(odd) {
+            background-color: blue;
+         }
+         
+         table tr:nth-child(even) {
+            background-color: green;
+         }
+      </style>
+	</head>
+	<body>
+		<div ng-app = "myApp", ng-controller = "myController">
+		<table>
+			<tr>
+				<td>FirstName</td>
+				<td><input type="text" ng-model = "student.firstName"></td>
+			</tr>
+			<tr>
+				<td>LastName</td>
+				<td><input type="text" ng-model = "student.lastName"></td>
+			</tr>
+			<tr>
+				<td>Full name</td>
+				<td>{{ student.fullName()}}</td>
+			</tr>
+			<tr>
+				<td>subject:</td>
+				<td>
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Marks</th>
+						</tr>
+						<tr ng-repeat = "subject in student.subjects">
+							<td>{{ subject.name }}</td>
+							<td>{{ subject.marks }}</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+			
+		</div>
+		<script>
+			var app = angular.module("myApp", [])
+				app.controller("myController", function($scope){
+					$scope.student = {
+						firstName :"chandrakanth",
+						lastName : "methuku",
+						fees : 500,
+						subjects : [
+						{name : "Maths", marks: 70},
+						{name : "Physics", marks: 56},
+						{name : "Chemistry", marks: 60},
+						{name : "Telugu", marks: 87}
+					  ],
+					  fullName : function(){
+					  	var studentObject;
+					  	studentObject = $scope.student;
+					  	return studentObject.firstName + ' ' + studentObject.lastName;
+					  }
+					};
+				});
+		</script>
+	</body>
+</html>

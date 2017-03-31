@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+			<script>
+				var pizza = {
+					crust:'thin',
+					tappings:3,
+					hasBacon:true,
+					howmanyTappings:function(){
+						return this.tappings;
+					}
+
+				};
+				
+				pizza.slices=8,  // adding a property 
+				delete(pizza.crust); // deleting a property
+				console.log(pizza.length);  
+				
+			</script>
+
+	</body>
+</html>

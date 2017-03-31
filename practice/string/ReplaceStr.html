@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a = "hi sridhar, how are you doing today";
+			String.prototype.myReplace = function(par1,par2){
+				var str = this;
+				var split = this.split(" ");
+				var result = '';
+				for (i=0; i<split.length; i++){
+					if(split[i] == par1){
+						split[i] = par2;
+					}
+					result = result + ' ' +split[i];
+				}
+				return result;
+			}
+			console.log(a.myReplace('hi', 'hello'));
+		</script>
+	</body>
+</html>

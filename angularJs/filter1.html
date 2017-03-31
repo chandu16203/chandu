@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script>
+			var app = angular.module("myApp", []);
+					app.filter("gender", function(){
+						return function(gender){
+							switch(gender){
+								case 1:
+								return 'Male';
+								case 2:
+								return 'Female';
+								case 3:
+								return 'Gay';
+							}
+						}
+					})
+					app.controller("myController", function($scope){
+						var employees = [
+						{ name: "Sridhar", gender: 1, age: 54},
+						{ name: "Vishnu", gender: 1, age: 15},
+						{ name: "laxmi", gender: 2, age: 52},
+						{ name: "Mouni", gender: 2, age: 24},
+						{ name: "Gay", gender: 3, age: 35}
+ 					];
+ 					$scope.employees = employees;
+				});
+		</script>
+	</head>
+	<body ng-app = "myApp">
+		<div ng-controller = "myController">
+			<table class="table table-inverse">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Gender</th>
+						<th>Age</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat = "employee in employees">
+						<td> {{ employee.name }} </td>	
+						<td> {{ employee.gender | gender}} </td>	
+						<td> {{ employee.age }} </td>				
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+
+
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script>
+			var app=angular.module('myApp', [])
+							.controller('myController', function($scope){
+								var employees=[
+									{ firstName: "ram", lastName: "meem", age:42 },
+									{ firstName: "sam", lastName: "jeem", age:52 },
+									{ firstName: "skjhg", lastName: "makjhm", age:62 }					
+								];
+								$scope.employees=employees;
+							});
+		</script>
+	</head>
+	<body ng-app="myApp">		
+			<div ng-controller="myController">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Firstname</th>
+							<th>Lastname</th>
+							<th>age</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="employee in employees">
+							<td>{{ employee.firstName }}</td>
+							<td>{{ employee.lastName }}</td>							
+							<td>{{ employee.age }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>		
+		
+	</body>
+</html>

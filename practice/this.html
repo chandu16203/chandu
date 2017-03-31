@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var person = {
+				name : 'chandrakanth',
+				age : 23,
+				nationality : 'india',
+				getName : function() {
+					return this.name;
+				}
+			}
+			console.log(person.getName());
+			var newFunc = person.getName;
+			console.log(typeof newFunc);
+			var obj = {
+				name : 'naresh'
+			}
+			console.log(newFunc.call(obj));
+			function fun1(a,b,c){
+				console.log(this,a,b,c)
+			}
+			fun1.call(obj,'hi', 'hello', 'every');
+			console.log(newFunc.apply(obj));
+			fun1.apply(obj,['hi', 'hello', 'every']);
+
+			function fun2(){
+				console.log(this)
+			}
+			var newFunc2 = fun2.bind(person);
+			newFunc2();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>bubble sort</title>
+	</head>
+	<body>
+		<script>
+			var arr = [7,3,6,9,2,54,45];
+			function bubbleSort(arr){
+				var i, j , len;
+				len = arr.length;
+				while(len--){
+					for((i=0, j=1); i<len; (i++, j++))
+						if(arr[i] > arr[j]){
+							temp = arr[i];
+							arr[i] = arr[j];
+							arr[j] = temp;
+						}
+				}
+				return arr;
+			}
+			document.write(bubbleSort(arr));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+		var a, b, c, result;
+			a=0;
+			b=1
+			c=2;
+			document.write(a+ "<br/>"+b+ "<br/>"+c+ "<br/>");
+			for(i=1; i<500; i++){
+				
+				
+				result = a+b+c;
+				if(result >= 500){
+					break
+				}
+				document.write(result+ "<br/>");
+				a=b;
+				b=c;
+				c=result;
+			   
+
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title></title>
+		<style>
+			.firstCtrl{
+				border: 2px solid red;
+			}
+			.secondCtrl{
+				border: 4px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div ng-app="myApp">
+			enter the rootName:<input ng-model='rootName'><br/>
+			the rootName is:<span ng-bind='rootName'></span>
+			<div class=firstCtrl ng-controller='FirstCtrl'>
+				enter the firstName:<input ng-model='firstName'><br/>      
+				the first name in FirstCtrl is:<span ng-bind='firstName'></span><br/>
+				the first name in FirstCtrl is:{{firstName}}<br/>
+				the rootName is:{{rootName}}			
+			</div>
+			<div class=secondCtrl ng-controller='SecondCtrl'>
+				the last name in SecondCtrl is:<span ng-bind='lastName'></span><br/>
+				the last name in SecondCtrl is:{{lastName}}<br/>
+				the rootName is:{{rootName}}	
+				<div ng-contoller="ThirdCtrl">
+					the last name in SecondCtrl is:<span ng-bind='lastName'></span><br/>
+					the last name in SecondCtrl is:{{lastName}}<br/>
+					the rootName is:{{rootName}}
+				</div>		
+			</div>
+			
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script>
+			var app=angular.module('myApp', []);
+			app.controller('FirstCtrl', function($scope){
+				$scope.firstName='javascript';
+			})
+			app.controller('SecondCtrl', function($scope){
+				$scope.lastName='ui';
+			})
+			app.controller('ThirdCtrl', function($scope){
+			})
+		</script>
+	</body>
+</html>

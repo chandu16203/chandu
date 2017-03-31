@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+	</head>
+	<body ng-app = "myApp">
+		<p><a href="#/">chandu</a></p>
+			<a href="#naresh">naresh</a>
+			<a href="#mouni">mouni</a>
+			<div ng-view></div>
+		<script>
+			var app = angular.module("myApp", ["ngRoute"])
+				app.config(function($routeProvider){
+					$routeProvider
+					.when("/", {
+						template : "<h1>chandu</h1>"
+
+					})
+					.when("/naresh", {
+						template : "<h1>naresh</h1> <p> he is from usa </p>"
+					})
+					.when("/mouni", {
+						template : "<h1> mouni </h1> <p> she is from india </p>"
+					});
+				});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a = "hi chandu";
+			String.prototype.myRepeat = function(num){
+				var str = this;
+				var b = " ";
+				for(i=0; i<num; i++){
+					b = b + str;
+				}
+				return b;
+			}
+			console.log(a.myRepeat(3));
+		</script>
+	</body>
+</html>

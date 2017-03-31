@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function fun1(){
+				return this;
+			}
+			fun1();
+			var newFunc = fun1.bind({name : 'mary', age : 42});
+			console.log(newFunc());
+		</script>
+
+	</body>
+</html>

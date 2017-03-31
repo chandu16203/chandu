@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			String.prototype.mySlice = function(firstIndex,lastIndex){
+				var str = this;
+				var result = " ";
+				for(i=firstIndex; i<lastIndex; i++){					
+						result = result + str.charAt(i);
+					}				
+				return result;
+			};
+			var a = "Akarnsas";
+			console.log(a.mySlice(2,6));
+		</script>
+	</body>
+</html>

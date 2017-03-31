@@ -1,0 +1,5 @@
+objects can be created by 
+		var obj = {};
+		var obj1 = new obj();
+==>objects basically contains key and value pairs
+==>key must be any of the js data types

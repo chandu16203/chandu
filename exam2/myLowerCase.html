@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			String.prototype.myLowerCase = function(){
+				var str = this;
+				var result = " ";
+				for(i=0; i<str.length; i++){
+					if(str.charCodeAt(i)>=65 && str.charCodeAt(i)<=90){
+						result = result + String.fromCharCode(str.charCodeAt(i) + 32)
+					}
+					else{
+						result = result + str.charAt(i);
+					}
+				}
+				return result;
+			};
+			var a = "CHANDU";
+			console.log(a.myLowerCase());
+		</script>
+	</body>
+</html>
